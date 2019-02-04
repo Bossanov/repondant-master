@@ -11,4 +11,9 @@ class PagesController < ApplicationController
 
   def mentions
   end
+
+  def admin
+  end
+
+
 end

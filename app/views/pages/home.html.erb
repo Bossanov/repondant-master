@@ -17,7 +17,7 @@
         <li><a class="smoothscroll" href="#about" title="">A propos de nous</a></li>
         <li><a class="smoothscroll" href="#services" title="">Notre charte</a></li>
         <li><a class="smoothscroll" href="#contact" title="">Inscrivez vous</a></li>
-        <li><a class="smoothscroll" href="#contact" title="">Espace Admin</a></li>
+        <li><a class="smoothscroll" href="/users/sign_in" title="">Espace Admin</a></li>
 
       </ul>
       <ul class="header-social-list">
@@ -33,7 +33,7 @@
        <div class="home-content-tablecell">
         <div class="row">
           <div class="col-twelve">
-            <h3 class="animate-intro">Nous recherchons des accompagnants.</h3>
+            <h1 class="animate-intro">Nous recherchons des accompagnants.</h1>
             <h7class="animate-intro" style="color:white">
               Le site permet aux professionnels de santé qui proposent des services d'accompagnement de s'inscrire gratuitement en ligne afin que les internautes en recherche de ce type de prestation trouvent facilement la personne correspondant à leurs besoins.
             </h7>
@@ -225,7 +225,7 @@ Le site permet aux professionnels qui proposent des services d’accompagnement 
               <%= f.input :prenom, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Prénom", style:"", label:false, input_html: { class:"form-field"} %>
               <%= f.input :age, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Âge", style:"", label:false, input_html: { class:"form-field"} %>
               <%= f.input :email, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"E-mail", style:"", label:false, input_html: { class:"form-field"} %>
-              <%= f.input :mobile, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Mobile", style:"", label:false, input_html: { class:"form-field"} %>
+              <%= f.input :mobile, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Téléphone", style:"", label:false, input_html: { class:"form-field"} %>
               <%= f.input :langue, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Langues parlées ou écrites", style:"", label:false, input_html: { class:"form-field"} %>
 
               <%= f.input :mobilite, :required => true, name:"contactEmail", id:"contactEmail", type:"email", placeholder:"Êtes vous mobile", style:"", label:false, input_html: { class:"form-field"} %>
@@ -238,7 +238,12 @@ Le site permet aux professionnels qui proposent des services d’accompagnement 
               <%= f.input :exphandicap,:as => :text, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Experiences handicap, quels types de personnes avez vous accompagné ?", style:"", label:false, input_html: { class:"form-field", style:"min-height:250px"} %>
               <%= f.input :services, :as => :text,:required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Quels types de services avez-vous l'habitude d'effectuer ?", style:"", label:false, input_html: { class:"form-field", style:"min-height:250px"} %>
               <%= f.input :ststut, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Votre statut juridique ", style:"", label:false, input_html: { class:"form-field"} %>
-
+              <p style="color:white;">Votre photo</p>
+               <%= f.input :photo, class: "form-control", label:"Votre photo"%>
+                          <%= f.input :photo_cache, as: :hidden %>
+              <p style="color:white;">Votre cv</p>
+               <%= f.input :cv, class: "form-control", label:"Votre CV"%>
+                          <%= f.input :photo_cache, as: :hidden %>
                <div class="form-field">
                   <button  class="submitform">Envoyer</button>
 

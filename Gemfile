@@ -7,7 +7,8 @@ ruby '2.5.3'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'pg'
-
+gem 'cloudinary', '~> 1.9.1'
+gem 'carrierwave', '~> 1.2'
 gem 'devise'
 gem 'dotenv-rails', groups: [:development, :test]
 # Use Puma as the app server
