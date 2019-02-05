@@ -1,8 +1,6 @@
 <body id="top">
   <header>
     <div class="header-logo" >
-
-
       <a >UPPIZ</a>
     </div>
     <a id="header-menu-trigger" href="#0">
@@ -17,8 +15,6 @@
         <li><a class="smoothscroll" href="#about" title="">A propos de nous</a></li>
         <li><a class="smoothscroll" href="#services" title="">Notre charte</a></li>
         <li><a class="smoothscroll" href="#contact" title="">Inscrivez vous</a></li>
-        <li><a class="smoothscroll" href="/users/sign_in" title="">Espace Admin</a></li>
-
       </ul>
       <ul class="header-social-list">
         <li>
@@ -141,85 +137,42 @@ Le site permet aux professionnels qui proposent des services d’accompagnement 
               </div>
 
          </div> <!-- end bgrid -->
-
-
-
         </div> <!-- end services-list -->
-
     </div> <!-- end services-content -->
-
    </section> <!-- end services -->
-
-
-
-
-   <!-- Testimonials Section
-   ================================================== -->
    <section id="testimonials">
-
     <div class="row">
       <div class="col-twelve">
         <h2 class="animate-this">Nos partenaires</h2>
       </div>
     </div>
-
       <div class="row flex-container">
-
          <div id="testimonial-slider" class="flex-slider animate-this">
-
             <ul class="slides">
-
                <li>
-
-
-                      <img src="/assets/user-02.png" width="1000" height="800" alt="Malakoff Mederic">
-
-
-              </li> <!-- end slide -->
-
-               <li>
-
-
-
-                      <img src="/assets/user-03.jpg" alt="Author image">
-
-
+                 <img src="/assets/user-02.png" width="450" height="350" alt="Malakoff Mederic">
                </li> <!-- end slide -->
-
+               <li>
+                  <img src="/assets/user-03.jpg" alt="Author image">
+               </li> <!-- end slide -->
             </ul> <!-- end slides -->
-
          </div> <!-- end testimonial-slider -->
-
       </div> <!-- end flex-container -->
-
    </section> <!-- end testimonials -->
-
    <section id="contact">
-
       <div class="overlay"></div>
-
-    <div class="row narrow section-intro with-bottom-sep animate-this">
-      <div class="col-twelve">
-        <h3>Accompagnants</h3>
-        <h1>Inscrivez vous </h1>
-
-        <p class="lead"></p>
-      </div>
-    </div> <!-- end section-intro -->
-
-    <div class="row contact-content">
-
-      <div class="col-seven tab-full animate-this">
-
-        <h5>Remplissez le formulaire</h5>
+        <div class="row narrow section-intro with-bottom-sep animate-this">
+          <div class="col-twelve">
+          <h3>Accompagnants</h3>
+          <h1>Inscrivez vous </h1>
+          <p class="lead"></p>
+        </div>
+      </div> <!-- end section-intro -->
+      <div class="row contact-content">
+        <div class="col-seven tab-full animate-this">
+          <h5>Remplissez le formulaire</h5>
           <% @contact = Contact.new %>
           <%= simple_form_for @contact do |f|%>
-            <!-- form -->
-
-
-
-
-
             <form name="contactForm" id="contactForm" method="post">
               <%= f.input :name, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Nom", style:"", label:false, input_html: { class:"form-field"} %>
               <%= f.input :prenom, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Prénom", style:"", label:false, input_html: { class:"form-field"} %>
@@ -227,21 +180,17 @@ Le site permet aux professionnels qui proposent des services d’accompagnement 
               <%= f.input :email, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"E-mail", style:"", label:false, input_html: { class:"form-field"} %>
               <%= f.input :mobile, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Téléphone", style:"", label:false, input_html: { class:"form-field"} %>
               <%= f.input :langue, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Langues parlées ou écrites", style:"", label:false, input_html: { class:"form-field"} %>
-
               <%= f.input :mobilite, :required => true, name:"contactEmail", id:"contactEmail", type:"email", placeholder:"Êtes vous mobile", style:"", label:false, input_html: { class:"form-field"} %>
               <%= f.input :lieuintervention, :as => :text, :required => true, name:"contactMessage", id:"contactMessage", type:"email", placeholder:"Lieu d'intervention habituel", style:"", label:false, input_html: { class:"form-field", style:"min-height:250px"} %>
-
               <%= f.input :permis, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Avez vous le permis de conduire", style:"", label:false, input_html: { class:"form-field"} %>
               <%= f.input :diplome, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Diplomes et qualifications", style:"", label:false, input_html: { class:"form-field"} %>
               <%= f.input :formations, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Formations spécifiques complémentaires", style:"", label:false, input_html: { class:"form-field"} %>
               <%= f.input :experience, :as => :text,:required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Expériences et recommandations", style:"", label:false, input_html: { class:"form-field", style:"min-height:250px"} %>
               <%= f.input :exphandicap,:as => :text, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Experiences handicap, quels types de personnes avez vous accompagné ?", style:"", label:false, input_html: { class:"form-field", style:"min-height:250px"} %>
               <%= f.input :services, :as => :text,:required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Quels types de services avez-vous l'habitude d'effectuer ?", style:"", label:false, input_html: { class:"form-field", style:"min-height:250px"} %>
-              <%= f.input :ststut, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Votre statut juridique ", style:"", label:false, input_html: { class:"form-field"} %>
-              <p style="color:white;">Votre photo</p>
+              <%= f.input :status, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Votre statut juridique ", style:"", label:false %>
                <%= f.input :photo, class: "form-control", label:"Votre photo"%>
                           <%= f.input :photo_cache, as: :hidden %>
-              <p style="color:white;">Votre cv</p>
                <%= f.input :cv, class: "form-control", label:"Votre CV"%>
                           <%= f.input :photo_cache, as: :hidden %>
                <div class="form-field">
@@ -250,9 +199,6 @@ Le site permet aux professionnels qui proposent des services d’accompagnement 
                   <p>Les informations demandées ci-dessus peuvent constituer des données à caractère personnel au sens du Règlement général du Parlement européen et du Conseil relatif à la protection des données personnelles n° 2016/679 du 27 avril 2016 et de la Loi Informatique & Libertés n° 78/17 du 6 janvier 1978 dans sa rédaction issue de la loi n° 2018/493 du 20 juin 2018. UPPIZ collecte ces données afin de mettre en relation les utilisateurs de la plateforme avec des professionnels qui pourront les accompagner dans leur projet de vacances, séjours ou loisirs.<br>
 Les champs signalés d’un astérisque rouge concernent des données nécessaires sans lesquelles votre demande ne pourra pas être prise en compte.
 Uppiz traite ces données conformément à la <a href="/mentions" target="_blank"ƒ >charte de confidentialité</a> qu’elle a adoptée</p>
-
-
-
                   <div id="submit-loader">
                      <div class="text-loader">Envoi en cours...</div>
                   <div class="s-loader">
@@ -261,8 +207,7 @@ Uppiz traite ces données conformément à la <a href="/mentions" target="_blank
                   <div class="bounce3"></div>
               </div>
             </div>
-               </div>
-
+           </div>
           </form> <!-- end form -->
           <% end %>
             <!-- contact-warning -->
@@ -291,16 +236,20 @@ Uppiz traite ces données conformément à la <a href="/mentions" target="_blank
         <div class="cinfo">
           <h6>Nous appeler</h6>
           <p>
-            Eric: 06 61 86 38 31
-
-
-           </p>
+            Eric: 06 61 86 38 31 </p>
         </div>
 
          </div> <!-- end cinfo -->
 
     </div> <!-- end row contact-content -->
-
+    <div class="more animate-intro">
+<a class=" button stroke" href="/admin">
+                    PAGE ADMIN
+              </a>
+              <a class=" button stroke" href="<%=new_user_session_path%>">
+                    se connecter
+              </a>
+            </div>
   </section> <!-- end contact -->
 
 

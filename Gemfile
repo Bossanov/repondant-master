@@ -10,6 +10,8 @@ gem 'pg'
 gem 'cloudinary', '~> 1.9.1'
 gem 'carrierwave', '~> 1.2'
 gem 'devise'
+gem 'fitvids-rails', '~> 1.1'
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
 gem 'dotenv-rails', groups: [:development, :test]
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
