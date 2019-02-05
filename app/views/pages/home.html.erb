@@ -18,7 +18,8 @@
       </ul>
       <ul class="header-social-list">
         <li>
-          <a href="https://twitter.com/AutismeService" target="_blank"><i class="fa fa-twitter"></i></a>
+          <a href="https://fr-fr.facebook.com/comuppiz/" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/comuppiz?lang=fr" target="_blank"><i class="fa fa-twitter"></i></a>
         </li>
       </ul>
     </nav>
@@ -45,7 +46,8 @@
     </div>
     <ul class="home-social-list">
       <li class="animate-intro">
-        <a href="https://twitter.com/AutismeService" target="_blank"><i class="fa fa-twitter"></i></a>
+        <a href="https://fr-fr.facebook.com/comuppiz/" target="_blank"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/comuppiz?lang=fr" target="_blank"><i class="fa fa-twitter"></i></a>
       </li>
     </ul>
     <div class="scrolldown">
@@ -131,7 +133,6 @@ Le site permet aux professionnels qui proposent des services d’accompagnement 
 
             <div class="service-content">
                 <h3 class="h05">Professionnel</h3>
-
                 <p>Les accompagnants UPPIZ acceptent le retour d’expérience du client afin de valider leurs compétences et proposer leurs services à nos clients.
                 </p>
               </div>
@@ -150,7 +151,7 @@ Le site permet aux professionnels qui proposent des services d’accompagnement 
          <div id="testimonial-slider" class="flex-slider animate-this">
             <ul class="slides">
                <li>
-                 <img src="/assets/user-02.png" width="450" height="350" alt="Malakoff Mederic">
+                 <img src="/assets/user-02.png" width="420" height="350" alt="Malakoff Mederic">
                </li> <!-- end slide -->
                <li>
                   <img src="/assets/user-03.jpg" alt="Author image">
@@ -186,12 +187,12 @@ Le site permet aux professionnels qui proposent des services d’accompagnement 
               <%= f.input :diplome, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Diplomes et qualifications", style:"", label:false, input_html: { class:"form-field"} %>
               <%= f.input :formations, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Formations spécifiques complémentaires", style:"", label:false, input_html: { class:"form-field"} %>
               <%= f.input :experience, :as => :text,:required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Expériences et recommandations", style:"", label:false, input_html: { class:"form-field", style:"min-height:250px"} %>
-              <%= f.input :exphandicap,:as => :text, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Experiences handicap, quels types de personnes avez vous accompagné ?", style:"", label:false, input_html: { class:"form-field", style:"min-height:250px"} %>
-              <%= f.input :services, :as => :text,:required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Quels types de services avez-vous l'habitude d'effectuer ?", style:"", label:false, input_html: { class:"form-field", style:"min-height:250px"} %>
+              <%= f.input :exphandicap,:as => :text, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Experiences handicap, quels types de personnes avez vous accompagné?", style:"", label:false, input_html: { class:"form-field", style:"min-height:250px"} %>
+              <%= f.input :services, :as => :text,:required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Types de services dont vous avez l'habitude d'effectuer?", style:"", label:false, input_html: { class:"form-field", style:"min-height:250px"} %>
 
-               <%= f.input :photo, class: "form-control", label:"Votre photo"%>
+               <%= f.input :photo, class: "form-control", label:"Votre photo en jpeg, jpg, png uniqumement"%>
                           <%= f.input :photo_cache, as: :hidden %>
-               <%= f.input :cv, class: "form-control", label:"Votre CV"%>
+               <%= f.input :cv, class: "form-control", label:"Votre CV en jpeg, jpg, png uniqumement"%>
                           <%= f.input :photo_cache, as: :hidden %>
                <div class="form-field">
                   <button  class="submitform">Envoyer</button>
@@ -228,7 +229,7 @@ Uppiz traite ces données conformément à la <a href="/mentions" target="_blank
 
         <div class="cinfo">
           <h6>Notre adresse Mail</h6>
-          <a>
+          <a href="mailto: info@uppiz.com">
             info@uppiz.com
            </a>
         </div> <!-- end cinfo -->
