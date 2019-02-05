@@ -190,9 +190,9 @@ Le site permet aux professionnels qui proposent des services d’accompagnement 
               <%= f.input :exphandicap,:as => :text, :required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Experiences handicap, quels types de personnes avez vous accompagné?", style:"", label:false, input_html: { class:"form-field", style:"min-height:250px"} %>
               <%= f.input :services, :as => :text,:required => true, name:"contactName", id:"contactName", type:"text", placeholder:"Types de services dont vous avez l'habitude d'effectuer?", style:"", label:false, input_html: { class:"form-field", style:"min-height:250px"} %>
 
-               <%= f.input :photo, class: "form-control", label:"Votre photo en jpeg, jpg, png uniqumement"%>
+               <%= f.input :photo, class: "form-control", label:"Votre photo "%>
                           <%= f.input :photo_cache, as: :hidden %>
-               <%= f.input :cv, class: "form-control", label:"Votre CV en jpeg, jpg, png uniqumement"%>
+               <%= f.input :cv, class: "form-control", label:"Votre CV "%>
                           <%= f.input :photo_cache, as: :hidden %>
                <div class="form-field">
                   <button  class="submitform">Envoyer</button>
@@ -247,9 +247,15 @@ Uppiz traite ces données conformément à la <a href="/mentions" target="_blank
 <a class=" button stroke" href="/admin">
                     PAGE ADMIN
               </a>
+              <% if current_user%>
+              <a class=" button stroke" href="<%=destroy_user_session_path%>">
+                 se deconnecter
+              </a>
+              <%else%>
               <a class=" button stroke" href="<%=new_user_session_path%>">
                     se connecter
               </a>
+              <% end%>
             </div>
   </section> <!-- end contact -->
 
